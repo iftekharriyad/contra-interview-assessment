@@ -47,7 +47,7 @@ Next, you'll need to install the `yarn` package manager to install project depen
 Now that `yarn` is installed locally, you'll want to run `yarn` to install dependencies.
 
 ```sh
-$ yarn
+$ yarn install
 ```
 
 ### Start the Frontend
