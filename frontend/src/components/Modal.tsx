@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-//import Document from '@/pages/_document';
+import FocusLock from 'react-focus-lock';
 
 import {
   Wrapper,
@@ -25,18 +25,35 @@ export const Modal: FunctionComponent<ModalProps> = ({
   modalContent,
   headerText,
 }) => {
+  const onKeyDown = (event: KeyboardEvent) => {
+    if (event.keyCode === 27 && isShown) {
+      hide();
+    }
+  };
+  useEffect(() => {
+    if(isShown){
+      document.body.style.overflow = 'hidden'
+      document.addEventListener('keydown', onKeyDown, false);
+      return () => {
+        document.removeEventListener('keydown', onKeyDown, false);
+      }
+    }else document.body.style.overflow = 'unset'
+  }, [isShown]);
+
   const modal = (
     <React.Fragment>
       <Backdrop onClick={hide}/>
+      <FocusLock>
       <Wrapper aria-modal aria-labelledby={headerText}  tabIndex={-1} role="dialog">
         <StyledModal>
           <Header>
             <HeaderText>{headerText}</HeaderText>
-            <CloseButton onClick={hide}>X</CloseButton>
+            <CloseButton  data-dismiss="modal" aria-label="Close"  onClick={hide}>X</CloseButton>
           </Header>
           <Content>{modalContent}</Content>
         </StyledModal>
       </Wrapper>
+      </FocusLock>
     </React.Fragment>
   );
 

@@ -1,10 +1,10 @@
 /* eslint-disable canonical/filename-match-exported */
 import React from 'react';
 import { type NextPage } from 'next';
-import { render } from 'react-dom';
 import { Modal } from '../components/Modal';
 import { useModal } from '../hooks/useModal';
 import { ConfirmationModal } from '../components/confirmation-modal'
+import { Text } from '@/components/Text';
 
 const Index: NextPage = () => {
   const {isShown, toggle} = useModal()
@@ -22,6 +22,7 @@ const Index: NextPage = () => {
                       />
       }
       headerText="Important!"/>
+      <Text/>
     </>
   )
 };
