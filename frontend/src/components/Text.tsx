@@ -1,7 +1,18 @@
 import React, { Component, FunctionComponent } from "react";
+import styled from "styled-components";
 
+
+const TextContainer= styled.div`
+padding:80px;
+
+h2{
+  text-align:center;
+}
+`
 export const Text: FunctionComponent = () => (
   <React.Fragment>
+    <TextContainer>
+      <h2>Dummy Text</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis mi tristique nisl maximus tristique. Etiam a diam metus. Suspendisse vitae augue lectus. Nunc mollis turpis sit amet orci pellentesque, at dictum lectus finibus. Integer lacus nisl, bibendum vel fermentum ut, pulvinar et metus. Ut euismod volutpat urna, vitae venenatis est cursus et. Integer nec placerat lectus. Praesent sit amet volutpat risus. Aenean vel imperdiet nisi.
 
@@ -18,15 +29,6 @@ export const Text: FunctionComponent = () => (
 
       Curabitur maximus ultricies diam eu maximus. In sit amet massa eu dui tempor pellentesque. In magna dolor, consectetur non turpis id, tincidunt ultricies velit. Proin vel arcu malesuada, luctus sem nec, elementum orci. Pellentesque facilisis nisi sed nulla sodales vehicula. Vivamus condimentum luctus lectus ac faucibus. Proin efficitur tellus eget nisl iaculis, in tristique elit sollicitudin. Nulla in placerat ex. Fusce id tortor vestibulum, commodo leo id, ultricies orci. Suspendisse sollicitudin nisi dui, nec finibus massa placerat ac. Aliquam dictum vulputate ipsum ut sollicitudin. Suspendisse ultrices felis at lacus tempus, quis sollicitudin lacus feugiat. Nullam sapien ante, venenatis eu sollicitudin eget, ornare ornare erat.
     </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis mi tristique nisl maximus tristique. Etiam a diam metus. Suspendisse vitae augue lectus. Nunc mollis turpis sit amet orci pellentesque, at dictum lectus finibus. Integer lacus nisl, bibendum vel fermentum ut, pulvinar et metus. Ut euismod volutpat urna, vitae venenatis est cursus et. Integer nec placerat lectus. Praesent sit amet volutpat risus. Aenean vel imperdiet nisi.
-
-      Curabitur maximus ultricies diam eu maximus. In sit amet massa eu dui tempor pellentesque. In magna dolor, consectetur non turpis id, tincidunt ultricies velit. Proin vel arcu malesuada, luctus sem nec, elementum orci. Pellentesque facilisis nisi sed nulla sodales vehicula. Vivamus condimentum luctus lectus ac faucibus. Proin efficitur tellus eget nisl iaculis, in tristique elit sollicitudin. Nulla in placerat ex. Fusce id tortor vestibulum, commodo leo id, ultricies orci. Suspendisse sollicitudin nisi dui, nec finibus massa placerat ac. Aliquam dictum vulputate ipsum ut sollicitudin. Suspendisse ultrices felis at lacus tempus, quis sollicitudin lacus feugiat. Nullam sapien ante, venenatis eu sollicitudin eget, ornare ornare erat.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis mi tristique nisl maximus tristique. Etiam a diam metus. Suspendisse vitae augue lectus. Nunc mollis turpis sit amet orci pellentesque, at dictum lectus finibus. Integer lacus nisl, bibendum vel fermentum ut, pulvinar et metus. Ut euismod volutpat urna, vitae venenatis est cursus et. Integer nec placerat lectus. Praesent sit amet volutpat risus. Aenean vel imperdiet nisi.
-
-      Curabitur maximus ultricies diam eu maximus. In sit amet massa eu dui tempor pellentesque. In magna dolor, consectetur non turpis id, tincidunt ultricies velit. Proin vel arcu malesuada, luctus sem nec, elementum orci. Pellentesque facilisis nisi sed nulla sodales vehicula. Vivamus condimentum luctus lectus ac faucibus. Proin efficitur tellus eget nisl iaculis, in tristique elit sollicitudin. Nulla in placerat ex. Fusce id tortor vestibulum, commodo leo id, ultricies orci. Suspendisse sollicitudin nisi dui, nec finibus massa placerat ac. Aliquam dictum vulputate ipsum ut sollicitudin. Suspendisse ultrices felis at lacus tempus, quis sollicitudin lacus feugiat. Nullam sapien ante, venenatis eu sollicitudin eget, ornare ornare erat.
-    </p>
+    </TextContainer>
   </React.Fragment>
 )

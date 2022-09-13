@@ -26,26 +26,30 @@ export const StyledModal = styled.div`
   position: relative;
   margin: auto;
   border-radius: 8px;
+  padding:.5em;
 `;
 
-export const Header = styled.div`
+export const Header = styled.h2`
+  font-weight:bold;
+  text-align:left;
   border-radius: 8px 8px 0 0;
   display: flex;
   justify-content: space-between;
-  padding: 0.3rem;
+  padding: .1rem 1.5rem .1rem 1.5rem;
+  margin:.2em auto;
 `;
 
 export const HeaderText = styled.div`
-  color: #fff;
+  color: black;
   align-self: center;
-  color: lightgray;
 `;
 
 export const CloseButton = styled.button`
   font-size: 0.8rem;
+  font-weight: 400;
   border: none;
   border-radius: 3px;
-  margin-left: 0.5rem;
+  margin-left: auto;
   background: none;
   :hover {
     cursor: pointer;
@@ -53,8 +57,9 @@ export const CloseButton = styled.button`
 `;
 
 export const Content = styled.div`
-  padding: 10px;
-  max-height: 30rem;
-  overflow-x: hidden;
-  overflow-y: auto;
+padding: .1rem 1.5rem .1rem 1.5rem;
+  // max-height: 30rem;
+  // overflow-x: hidden;
+  // overflow-y: auto;
+  
 `;

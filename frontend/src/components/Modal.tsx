@@ -37,7 +37,7 @@ export const Modal: FunctionComponent<ModalProps> = ({
       return () => {
         document.removeEventListener('keydown', onKeyDown, false);
       }
-    }else document.body.style.overflow = 'unset'
+    }else document.body.style.overflow = 'visible'
   }, [isShown]);
 
   const modal = (
@@ -46,9 +46,9 @@ export const Modal: FunctionComponent<ModalProps> = ({
       <FocusLock>
       <Wrapper aria-modal aria-labelledby={headerText}  tabIndex={-1} role="dialog">
         <StyledModal>
+        <CloseButton  data-dismiss="modal" aria-label="Close"  onClick={hide}>Close</CloseButton>
           <Header>
             <HeaderText>{headerText}</HeaderText>
-            <CloseButton  data-dismiss="modal" aria-label="Close"  onClick={hide}>X</CloseButton>
           </Header>
           <Content>{modalContent}</Content>
         </StyledModal>
